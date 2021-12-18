@@ -1,0 +1,13 @@
+$mobileBreakpoint: 475px;
+
+$primaryVeryDarkBlue: hsl(233, 47%, 7%);    // main bg
+$primaryDarkDesatBlue: hsl(244, 38%, 16%);  // card bg
+$primarySoftViolet: hsl(277, 64%, 61%);     // accent
+
+$neutralWhiteOpaque: hsl(0, 0%, 100%);  // main heading, stats
+$neutralWhiteLessOpaque: hsla(0, 0%, 100%, 0.75);   // main para
+$neutralWhiteTransparent: hsla(0, 0%, 100%, 0.6);   // stat headings
+
+$fontSize: 15px;
+$fontInter: 'Inter', sans-serif;
+$fontLexend: 'Lexend Deca', sans-serif;
