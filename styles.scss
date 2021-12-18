@@ -1,4 +1,4 @@
-$mobileBreakpoint: 475px;
+$mobileBreakpoint: 425px;
 
 $primaryVeryDarkBlue: hsl(233, 47%, 7%);    // main bg
 $primaryDarkDesatBlue: hsl(244, 38%, 16%);  // card bg
@@ -14,6 +14,7 @@ $fontLexend: 'Lexend Deca', sans-serif;
 
 * {
     font-family: $fontInter;
+    line-height: 1.5em;
 }
 
 body {
@@ -28,10 +29,6 @@ em {
     color: $primarySoftViolet;
 }
 
-h1 {
-    color: $neutralWhiteOpaque;
-}
-
 p {
     color: $neutralWhiteLessOpaque;
     font-size: $fontSize;
@@ -39,11 +36,16 @@ p {
 
 .stats-preview-card {
     background-color: $primaryDarkDesatBlue;
-}
+    border-radius: 10px;
 
-.image-header {
-    img {
-        height: 0px;
+    h1 {
+        color: $neutralWhiteOpaque;
+        font-size: $fontSize + 12px;
+        line-height: normal;
+    }
+
+    .information {
+        padding: 30px;
     }
 }
 
@@ -57,5 +59,52 @@ p {
     strong {
         color: $neutralWhiteOpaque;
         text-transform: none;
+    }
+}
+
+.image-header {
+    background-color: $primarySoftViolet;
+
+    img {
+        display: block; // learned a new thing about inline vs block!
+        opacity: .75;
+        mix-blend-mode: multiply;
+    }
+}
+
+.hide {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+@media screen and (max-width: $mobileBreakpoint) {
+    .stats-preview-card {
+        display: flex;
+        flex-flow: column nowrap;
+        text-align: center;
+        width: 85vw;
+        margin: auto;
+
+        .image-header {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+
+            .desktop-image {
+                display: none;
+            }
+
+            .mobile-image {
+                width: inherit;
+                border-radius: 10px 10px 0 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: ($mobileBreakpoint + 1)) {
+    .stats-preview-card {
+        display: flex;
+        flex-flow: row-reverse nowrap;
     }
 }

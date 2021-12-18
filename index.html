@@ -18,31 +18,37 @@
   </style>
 </head>
 <body>
-  <section class="stats-preview-card">
+  <div class="stats-preview-card">
     <div class='image-header'>
       <img src="./images/image-header-desktop.jpg" 
-      alt="A photo of a lively discussion with our team members."> <!--make opacity 0, but keep for accessibility-->
+      alt="A photo of a lively discussion with our team members."
+      class='desktop-image'>
+      <img src="./images/image-header-mobile.jpg" 
+      alt="A photo of a lively discussion with our team members."
+      class='mobile-image'>
     </div>
-    <h1>
-      Get <em>insights</em> that help your business grow.
-    </h1>
-    <p>
-      Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-      experience, and overall efficiency.
-    </p>
-    <section class="statistics-container">
-        <h2>Our Stats</h2> <!--will not be visible (absolute positioning outside of screen)-->
-        <p>
-          <strong>10k+</strong> <br> companies
-        </p>
-        <p>
-          <strong>314</strong> <br> templates
-        </p>
-        <p>
-          <strong>12m+</strong> <br> queries
-        </p>
+    <section class='information'>
+      <h1>
+        Get <em>insights</em> that help your business grow.
+      </h1>
+      <p>
+        Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+        experience, and overall efficiency.
+      </p>
+      <section class="statistics-container">
+          <h2 class='hide'>Our Stats</h2> <!--will not be visible (absolute positioning outside of screen)-->
+          <p>
+            <strong>10k+</strong> <br> companies
+          </p>
+          <p>
+            <strong>314</strong> <br> templates
+          </p>
+          <p>
+            <strong>12m+</strong> <br> queries
+          </p>
+      </section>
     </section>
-  </section>
+  </div>
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
