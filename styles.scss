@@ -11,3 +11,51 @@ $neutralWhiteTransparent: hsla(0, 0%, 100%, 0.6);   // stat headings
 $fontSize: 15px;
 $fontInter: 'Inter', sans-serif;
 $fontLexend: 'Lexend Deca', sans-serif;
+
+* {
+    font-family: $fontInter;
+}
+
+body {
+    background-color: $primaryVeryDarkBlue;
+}
+
+strong, em {
+    font-style: normal;
+}
+
+em {
+    color: $primarySoftViolet;
+}
+
+h1 {
+    color: $neutralWhiteOpaque;
+}
+
+p {
+    color: $neutralWhiteLessOpaque;
+    font-size: $fontSize;
+}
+
+.stats-preview-card {
+    background-color: $primaryDarkDesatBlue;
+}
+
+.image-header {
+    img {
+        height: 0px;
+    }
+}
+
+.statistics-container {
+    p {
+        color: $neutralWhiteTransparent;
+        font-family: $fontLexend;
+        text-transform: uppercase;
+    }
+
+    strong {
+        color: $neutralWhiteOpaque;
+        text-transform: none;
+    }
+}

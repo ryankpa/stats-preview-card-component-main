@@ -1,0 +1,44 @@
+* {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #090b1a;
+}
+
+strong, em {
+  font-style: normal;
+}
+
+em {
+  color: #aa5cdb;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+}
+
+.stats-preview-card {
+  background-color: #1b1938;
+}
+
+.image-header img {
+  height: 0px;
+}
+
+.statistics-container p {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Lexend Deca", sans-serif;
+  text-transform: uppercase;
+}
+.statistics-container strong {
+  color: white;
+  text-transform: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
