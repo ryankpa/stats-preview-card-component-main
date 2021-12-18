@@ -32,6 +32,7 @@ em {
 p {
     color: $neutralWhiteLessOpaque;
     font-size: $fontSize;
+    font-weight: 400;   // change this to a var later
 }
 
 .stats-preview-card {
@@ -40,7 +41,7 @@ p {
 
     h1 {
         color: $neutralWhiteOpaque;
-        font-size: $fontSize + 12px;
+        font-size: $fontSize + 11px;
         line-height: normal;
     }
 
@@ -53,10 +54,13 @@ p {
     p {
         color: $neutralWhiteTransparent;
         font-family: $fontLexend;
+        font-size: .8em;
+        font-weight: 400;   // also change this to a var
         text-transform: uppercase;
     }
 
     strong {
+        font-size: $fontSize + 7px;
         color: $neutralWhiteOpaque;
         text-transform: none;
     }
@@ -83,7 +87,7 @@ p {
         display: flex;
         flex-flow: column nowrap;
         text-align: center;
-        width: 85vw;
+        width: 86vw;
         margin: auto;
 
         .image-header {
@@ -97,6 +101,16 @@ p {
             .mobile-image {
                 width: inherit;
                 border-radius: 10px 10px 0 0;
+            }
+        }
+
+        .information {
+            padding-top: 10px;
+
+            .statistics-container {
+                position: relative;
+                flex-flow: column nowrap;
+                top: 10px;
             }
         }
     }
