@@ -1,4 +1,4 @@
-$mobileBreakpoint: 425px;
+$mobileBreakpoint: 1023px;
 
 $primaryVeryDarkBlue: hsl(233, 47%, 7%);    // main bg
 $primaryDarkDesatBlue: hsl(244, 38%, 16%);  // card bg
@@ -55,11 +55,13 @@ p {
         color: $neutralWhiteTransparent;
         font-family: $fontLexend;
         font-size: .8em;
+        letter-spacing: .1rem;
         font-weight: 400;   // also change this to a var
         text-transform: uppercase;
     }
 
     strong {
+        letter-spacing: normal;
         font-size: $fontSize + 7px;
         color: $neutralWhiteOpaque;
         text-transform: none;
@@ -84,6 +86,8 @@ p {
 
 @media screen and (max-width: $mobileBreakpoint) {
     .stats-preview-card {
+        position: relative;
+        top: 100px;
         display: flex;
         flex-flow: column nowrap;
         text-align: center;
@@ -100,7 +104,6 @@ p {
 
             .mobile-image {
                 width: inherit;
-                border-radius: 10px 10px 0 0;
             }
         }
 
@@ -117,8 +120,79 @@ p {
 }
 
 @media screen and (min-width: ($mobileBreakpoint + 1)) {
-    .stats-preview-card {
+    body {
         display: flex;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .stats-preview-card {
+        position: relative;
+        display: flex;
+        width: 85vw;
+        height: 60vh;
+        
+        margin: auto;
         flex-flow: row-reverse nowrap;
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 2em;
+        }
+
+        .image-header {
+            border-radius: 0 10px 10px 0;
+            box-sizing: border-box;
+            overflow: hidden;
+            width: 50%;
+            height: inherit;
+
+            .desktop-image {
+                object-fit: fill;
+                width: 100%;
+                height: inherit;
+            }
+
+            .mobile-image {
+                display: none;
+            }
+        }
+
+        .information {
+            display: flex;
+            flex-flow: column nowrap;
+            
+            width: 50%;
+            height: 100%;
+            box-sizing: border-box;
+            padding-left: 70px;
+            padding-right: 150px;
+            padding-bottom: 70px;
+
+            .statistics-container {
+                display: flex;
+                flex-flow: row nowrap;
+                height: fit-content;
+                justify-content: space-between;
+                margin-top: auto;
+                width: 90%;
+
+                p {
+                    font-size: $fontSize - 3px;
+                }
+
+                strong {
+                    font-size: $fontSize + 10px;
+                }
+            }
+        }
     }
 }

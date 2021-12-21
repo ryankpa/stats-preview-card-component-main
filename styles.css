@@ -38,10 +38,12 @@ p {
   color: rgba(255, 255, 255, 0.6);
   font-family: "Lexend Deca", sans-serif;
   font-size: 0.8em;
+  letter-spacing: 0.1rem;
   font-weight: 400;
   text-transform: uppercase;
 }
 .statistics-container strong {
+  letter-spacing: normal;
   font-size: 22px;
   color: white;
   text-transform: none;
@@ -62,8 +64,10 @@ p {
   left: -9999px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 1023px) {
   .stats-preview-card {
+    position: relative;
+    top: 100px;
     display: flex;
     flex-flow: column nowrap;
     text-align: center;
@@ -79,7 +83,6 @@ p {
   }
   .stats-preview-card .image-header .mobile-image {
     width: inherit;
-    border-radius: 10px 10px 0 0;
   }
   .stats-preview-card .information {
     padding-top: 10px;
@@ -90,10 +93,70 @@ p {
     top: 10px;
   }
 }
-@media screen and (min-width: 426px) {
-  .stats-preview-card {
+@media screen and (min-width: 1024px) {
+  body {
     display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .stats-preview-card {
+    position: relative;
+    display: flex;
+    width: 85vw;
+    height: 60vh;
+    margin: auto;
     flex-flow: row-reverse nowrap;
+  }
+  .stats-preview-card h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+  .stats-preview-card p {
+    line-height: 2em;
+  }
+  .stats-preview-card .image-header {
+    border-radius: 0 10px 10px 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 50%;
+    height: inherit;
+  }
+  .stats-preview-card .image-header .desktop-image {
+    object-fit: fill;
+    width: 100%;
+    height: inherit;
+  }
+  .stats-preview-card .image-header .mobile-image {
+    display: none;
+  }
+  .stats-preview-card .information {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 70px;
+    padding-right: 150px;
+    padding-bottom: 70px;
+  }
+  .stats-preview-card .information .statistics-container {
+    display: flex;
+    flex-flow: row nowrap;
+    height: fit-content;
+    justify-content: space-between;
+    margin-top: auto;
+    width: 90%;
+  }
+  .stats-preview-card .information .statistics-container p {
+    font-size: 12px;
+  }
+  .stats-preview-card .information .statistics-container strong {
+    font-size: 25px;
   }
 }
 
